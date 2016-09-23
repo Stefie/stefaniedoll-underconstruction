@@ -1,31 +1,31 @@
 # Starter-Kit
 
-gulp-stylus
+CSS Compiler:
+http://stylus-lang.com/
 
-gulp-util
+HTML Compiler:
+https://pugjs.org/ (formerly JADE)
 
-gulp-clean-css
+Javascript Compiler:
+http://babeljs.io/
 
-gulp-rename
+Dev Dependencies:
+- babel-preset-es2015 (http://babeljs.io/docs/plugins/preset-es2015/)
+- pug (https://www.npmjs.com/package/pug)
+- del (https://www.npmjs.com/package/del)
+- jshint (https://www.npmjs.com/package/jshint)
+- gulp (https://www.npmjs.com/package/gulpgulp uninstall)
+- gulp-stylus (https://www.npmjs.com/package/gulp-rename)
+- gulp-util (https://www.npmjs.com/package/gulp-util)
+- gulp-rename (https://www.npmjs.com/package/gulp-rename)
+- gulp-autoprefixer (https://www.npmjs.com/package/gulp-autoprefixer)
+- gulp-util (https://www.npmjs.com/package/gulp-util)
+- gulp-clean-css (https://www.npmjs.com/package/gulp-clean-css)
+- gulp-rename (https://www.npmjs.com/package/gulp-rename)
+- gulp-sourcemaps (https://www.npmjs.com/package/gulp-sourcemaps)
+- gulp-jshint (https://www.npmjs.com/package/gulp-jshint)
+- gulp-wrapper (https://www.npmjs.com/package/gulp-wrapper)
 
-gulp-autoprefixer
-
-gulp-util
-
-gulp-minify-css
-
-gulp-rename del
-
-gulp-uglify
-
-gulp-sourcemaps
-
-gulp-concat
-
-jshint
-
-gulp-jshint
-
-gulp-wrapper
-
-babel-preset-es2015
+//
+- gulp-concat (https://www.npmjs.com/package/gulp-concat)
+- gulp-uglify (https://www.npmjs.com/package/gulp-uglify)
