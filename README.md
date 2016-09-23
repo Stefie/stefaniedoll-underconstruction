@@ -28,4 +28,4 @@ gulp-jshint
 
 gulp-wrapper
 
-babel-preset-react
+babel-preset-es2015
