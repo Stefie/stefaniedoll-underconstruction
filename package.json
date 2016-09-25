@@ -2,10 +2,6 @@
   "name": "stefaniedoll.de",
   "description": "Gulp example app for the tutorial",
   "version": "1.0.0",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "homepage",
     "website",
@@ -28,6 +24,7 @@
     "gulp-util": "^3.0.7",
     "gulp-wrapper": "^1.0.0",
     "jshint": "^2.9.3",
+    "nib": "^1.1.2",
     "pug": "^2.0.0-beta6"
   }
 }
