@@ -3,13 +3,13 @@ html(lang="en")
 	head
 		title #{title}
 		block styles
-			style(src="/css/app.css", type="text/css")
+			link(href="app.css", rel="stylesheet")
 
 		block scripts
 
 		body
 			block content
-				
+
 			include includes/footer.pug
 
 			block footerScripts

@@ -15,15 +15,20 @@ const rootpatterns = './app/patterns/',
 
 // Compile CSS with stylus
 gulp.task('compile:styl', function() {
-  return gulp.src([rootStyles + 'includes.styl', rootpatterns + '**/**/*.styl'])
+  return gulp.src([
+		rootStyles + '_variables.styl',
+		rootStyles + '_mixins.styl',
+		rootpatterns + '**/**/*.styl'
+		])
+		.pipe(concat('app.styl'))
     .pipe(sourcemaps.init())
     .pipe(stylus({
+			'resolve url': true,
 			import: ['nib'],
       use: nib()
 		}))
     .pipe(sourcemaps.write())
-		.pipe(concat('app.css'))
-    .pipe(gulp.dest('./public/css'))
+    .pipe(gulp.dest('./app'))
 		.pipe(browserSync.reload({
       stream: true
     }));
@@ -31,8 +36,8 @@ gulp.task('compile:styl', function() {
 
 // Compile html with pug
 gulp.task('compile:pug', function buildHTML() {
-  return gulp.src('./app/patterns/pages/*.pug')
-  .pipe(pug())
+  return gulp.src('./app/pages/*.pug')
+  .pipe(pug({basedir: __dirname + '/app'}))
 	.pipe(gulp.dest('./public'))
 	.pipe(browserSync.reload({
 		stream: true
@@ -51,7 +56,7 @@ gulp.task('app:browserSync', function() {
   browserSync.init({
     server: {
       baseDir: 'app',
-			index: "../public/index.html"
+			index: "public/index.html"
     },
   })
 })
