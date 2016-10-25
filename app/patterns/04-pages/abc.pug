@@ -1,0 +1,57 @@
+extends /patterns/layout/layout.pug
+
+block fullScreenHead
+	a-scene
+		// S
+		a-sphere(position='-1 0 1', radius='0.2', color='#D95B43')
+		a-sphere(position='-0.5 0 1', radius='0.2', color='#D95B43')
+		a-sphere(position='0 0 1', radius='0.2', color='#D95B43')
+		a-sphere(position='0 0.5 1', radius='0.2', color='#D95B43')
+		a-sphere(position='0 1 1', radius='0.2', color='#D95B43')
+		a-sphere(position='-0.5 1 1', radius='0.2', color='#D95B43')
+		a-sphere(position='-1 1 1', radius='0.2', color='#D95B43')
+		a-sphere(position='-1 1.5 1', radius='0.2', color='#D95B43')
+		a-sphere(position='0 2 1', radius='0.2', color='#D95B43')
+		a-sphere(position='-0.5 2 1', radius='0.2', color='#D95B43')
+		a-sphere(position='-1 2 1', radius='0.2', color='#D95B43')
+
+
+		// T
+		a-sphere(position='1.5 0 1', radius='0.2', color='#542437')
+		a-sphere(position='1.5 0.5 1', radius='0.2', color='#542437')
+		a-sphere(position='1.5 1 1', radius='0.2', color='#542437')
+		a-sphere(position='1.5 1.5 1', radius='0.2', color='#542437')
+		a-sphere(position='1.5 2 1', radius='0.2', color='#542437')
+		a-sphere(position='1 2 1', radius='0.2', color='#542437')
+		a-sphere(position='2 2 1', radius='0.2', color='#542437')
+
+		// E
+		a-sphere(position='3 0 1', radius='0.2', color='#ECD078')
+		a-sphere(position='3 0.5 1', radius='0.2', color='#ECD078')
+		a-sphere(position='3 1 1', radius='0.2', color='#ECD078')
+		a-sphere(position='3 1.5 1', radius='0.2', color='#ECD078')
+		a-sphere(position='3 2 1', radius='0.2', color='#ECD078')
+		a-sphere(position='3.5 0 1', radius='0.2', color='#ECD078')
+		a-sphere(position='4 0 1', radius='0.2', color='#ECD078')
+		a-sphere(position='3.5 1 1', radius='0.2', color='#ECD078')
+		a-sphere(position='4 1 1', radius='0.2', color='#ECD078')
+		a-sphere(position='3.5 2 1', radius='0.2', color='#ECD078')
+		a-sphere(position='4 2 1', radius='0.2', color='#ECD078')
+
+		// F
+		a-sphere(position='5 0 1', radius='0.2', color='#C02942')
+		a-sphere(position='5 0.5 1', radius='0.2', color='#C02942')
+		a-sphere(position='5 1 1', radius='0.2', color='#C02942')
+		a-sphere(position='5 1.5 1', radius='0.2', color='#C02942')
+		a-sphere(position='5 2 1', radius='0.2', color='#C02942')
+		a-sphere(position='5.5 1 1', radius='0.2', color='#C02942')
+		a-sphere(position='6 1 1', radius='0.2', color='#C02942')
+		a-sphere(position='5.5 2 1', radius='0.2', color='#C02942')
+		a-sphere(position='6 2 1', radius='0.2', color='#C02942')
+
+
+		a-sky(color='#F9FBF0')
+		a-entity(position='0 -1 8')
+			a-camera
+
+block content

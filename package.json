@@ -1,7 +1,10 @@
 {
   "name": "stefaniedoll.de",
-  "description": "Gulp example app for the tutorial",
+  "description": "Gulp example app",
   "version": "1.0.0",
+	"scripts": {
+		"start": "gulp"
+	},
   "keywords": [
     "homepage",
     "website",

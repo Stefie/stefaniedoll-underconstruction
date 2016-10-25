@@ -1,0 +1,11 @@
+extends /patterns/layout/layout.pug
+
+block fullScreenHead
+	a-scene
+		a-boxtest(depth='2')
+		a-entity(geometry='primitive: torus; radius: 5; radiusTubular: 0.2; arc: 360', rotation='15 45 30')
+		a-entity(geometry='primitive: torus; radius: 4.6; radiusTubular: 0.2; arc: 360', rotation='15 45 30')
+		a-entity(position='0 0 8')
+			a-camera
+				
+block footer
