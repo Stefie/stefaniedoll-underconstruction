@@ -3,6 +3,7 @@ del = require('del'),
 pug = require('gulp-pug2'),
 stylus = require('gulp-stylus'),
 sourcemaps = require('gulp-sourcemaps'),
+image = require('gulp-image'),
 nib = require('nib'),
 babel = require("gulp-babel"),
 concat = require('gulp-concat'),
@@ -49,14 +50,13 @@ gulp.task('compile:pug', function buildHTML() {
 // Compile Javascript
 gulp.task('compile:js', function() {
 	var aframe = gulp.src([
-		rootJS + 'plugins/aframe.min.js',
-		rootJS + 'plugins/kframe.min.js',
+		rootJS + 'aframe/aframe.min.js',
+		rootJS + 'aframe/kframe.min.js',
 		rootJS + 'fonts/*.typeface.js'
 		])
-		.pipe(concat('aframe-kframe.min.js'))
 		.pipe(gulp.dest('public/js'));
 	var appjs = gulp.src([
-		rootJS + 'aframe/*.js',
+		rootJS + 'plugins/*.js',
 		rootJS + 'app.js'
 		])
 		.pipe(concat('app.js'))
@@ -65,6 +65,23 @@ gulp.task('compile:js', function() {
 		}))**/
 		.pipe(gulp.dest('public/js'));
 	return (aframe, appjs);
+});
+
+// compile images
+gulp.task('compile:assets', function () {
+	gulp.src(rootAssets + '**/*')
+	.pipe(image({
+		pngquant: false,
+		optipng: false,
+		zopflipng: false,
+		jpegRecompress: false,
+		jpegoptim: false,
+		mozjpeg: false,
+		gifsicle: false,
+		svgo: false,
+		concurrent: 10
+	}))
+	.pipe(gulp.dest('public'));
 });
 
 // Watch task
@@ -91,4 +108,4 @@ gulp.task('clean:public', function() {
 
 
 // Default gulp task to run
-gulp.task('default', ['clean:public', 'compile:styl', 'compile:pug', 'compile:js', 'app:watch', 'app:browserSync']);
+gulp.task('default', ['clean:public', 'compile:styl', 'compile:pug', 'compile:js', 'compile:assets', 'app:watch', 'app:browserSync']);
