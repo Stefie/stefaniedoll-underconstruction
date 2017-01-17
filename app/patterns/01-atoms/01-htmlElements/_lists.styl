@@ -1,0 +1,27 @@
+ul
+	align-items center
+	text-transform uppercase
+	display flex
+	list-style none
+	> li
+		padding $layoutSpace 0
+		+ li
+			margin-left $layoutSpaceHalf
+
+	&.contact
+		justify-content center
+		margin $layoutSpaceDouble 0
+		li a
+			flex-flow row wrap
+			justify-content center
+			align-items center
+			display flex
+			margin 0 5px
+			span
+				display: inline-block
+				width 100%
+				text-align center
+				font-size 14px
+			[class^="icon-"], [class*=" icon-"]
+				font-size 40px
+				line-height 50px
