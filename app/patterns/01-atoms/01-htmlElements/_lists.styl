@@ -3,14 +3,17 @@ ul
 	text-transform uppercase
 	display flex
 	list-style none
+	justify-content center
 	> li
-		padding $layoutSpace 0
+		padding $layoutSpaceHalf 0
+		position relative
 		+ li
 			margin-left $layoutSpaceHalf
 
 	&.contact
-		justify-content center
-		margin $layoutSpaceDouble 0
+		margin $layoutSpace 0 $layoutSpaceHalf
+		@media screen and (min-width: 600px)
+			margin $layoutSpace 0
 		li a
 			flex-flow row wrap
 			justify-content center
@@ -25,3 +28,38 @@ ul
 			[class^="icon-"], [class*=" icon-"]
 				font-size 40px
 				line-height 50px
+
+	&.construction
+		margin $layoutSpaceAndHalf ($layoutSpace * -1) $layoutSpace
+		flex-wrap wrap
+		@media screen and (min-width: 600px)
+			margin-bottom $layoutSpaceAndHalf
+			margin-top $layoutSpaceDouble
+		.button
+			height 25px
+			line-height 25px
+			position relative
+		.icon
+			font-size 38px
+			padding-left $brickBorderWidth
+		li
+			display flex
+			flex-wrap nowrap
+			align-items flex-end
+			&:first-child
+			&:last-child
+				.icon
+					padding-left 0
+			&:first-child
+				.icon
+					transform: rotateY(180deg)
+				.button:before
+					display none
+			&:last-child
+				margin-left 30px
+				.button:after
+					display none
+		.icon-stickman-4
+			position absolute
+			top -12px
+			left: -21px

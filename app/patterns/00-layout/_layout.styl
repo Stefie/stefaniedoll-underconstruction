@@ -3,12 +3,12 @@ body
 	color $fontColor
 	min-height 100vh
 	flex-flow row wrap
-	justify-content flex-start
 	align-items center
 	display flex
 	font-family $fontFamiliyBase
 	font-size 16px
 	line-height 28px
+	padding $layoutSpace
 	@media screen and (min-width: 600px)
 		font-size $fontSizeBase
 		line-height $lineHeightBase
@@ -18,7 +18,6 @@ body
 	flex 1 100%
 
 .page-content
-	padding $layoutSpace
 	text-align center
 
 .page-footer

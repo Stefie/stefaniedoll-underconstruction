@@ -1,0 +1,19 @@
+colorChangerFrames(property)
+	0%
+		{property} $colorSecondary
+	20%
+		{property} $colorSecondaryLight
+	40%
+		{property} $colorHighlight
+	60%
+		{property} $colorPrimaryLight
+	80%
+		{property} $colorPrimary
+	100%
+		{property} $colorSecondary
+
+@keyframes colorChanger
+	colorChangerFrames('background-color')
+
+@keyframes colorChangerPseudo
+	colorChangerFrames('border-color')

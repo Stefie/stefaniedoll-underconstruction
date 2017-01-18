@@ -4,3 +4,33 @@
 	width auto
 	color $colorWhite
 	text-transform uppercase
+	line-height 1em
+	white-space: nowrap;
+	font-size 14px
+	@media screen and (min-width: 768px)
+		font-size 18px
+	&:before
+	&:after
+		width ($brickBorderWidth + 1px)
+		height $brickHeight
+		content ''
+		display inline-block
+		position absolute
+	&:before
+		border-top $brickHeight solid $colorBlack
+		border-bottom $brickHeight solid $colorBlack
+		left ($brickBorderWidth * -1)
+		top 0
+	&:after
+		background-color $colorBlack
+		top $brickHeight
+		right ($brickBorderWidth * -1)
+	&.button-highlight
+		background-color $colorHighlight
+		animation colorChanger 6s infinite
+		&:before
+			border-color $colorHighlight
+			animation colorChangerPseudo 6s infinite
+		&:after
+			background-color $colorHighlight
+			animation colorChanger 6s infinite
