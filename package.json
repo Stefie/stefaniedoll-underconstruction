@@ -12,8 +12,7 @@
 	"keywords": [
 		"pug2",
 		"stylus",
-		"gulp",
-		"test"
+		"gulp"
 	],
 	"author": "Stefanie Doll",
 	"license": "ISC",
