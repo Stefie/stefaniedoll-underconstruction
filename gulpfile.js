@@ -10,10 +10,9 @@ browserSync = require('browser-sync').create();
 
 /** Paths **/
 const rootPatterns = './app/patterns/',
-rootJS = './app/js/',
 rootStyles = './app/styles/',
 rootAssets = './app/assets/',
-rootPages = './app/patterns/04-pages/',
+rootPages = './app/patterns/',
 rootPublic = './docs/';
 
 // Compile CSS with stylus
@@ -46,20 +45,6 @@ gulp.task('compile:pug', function buildHTML() {
 	}));
 });
 
-// Compile Javascript
-gulp.task('compile:js', function() {
-	var aframe = gulp.src([
-		rootJS + 'aframe/aframe.min.js'
-		])
-		.pipe(gulp.dest(rootPublic + 'js'));
-	var appjs = gulp.src([
-		rootJS + 'plugins/*.js',
-		rootJS + 'app.js'
-		])
-		.pipe(gulp.dest(rootPublic + 'js'));
-	return (aframe, appjs);
-});
-
 // compile images
 gulp.task('compile:assets', function () {
 	gulp.src(rootAssets + '**/*')
@@ -70,7 +55,6 @@ gulp.task('compile:assets', function () {
 gulp.task('app:watch', ['app:browserSync', 'compile:styl'], function() {
 	gulp.watch([rootStyles + '**/*.styl', rootStyles + '*.styl',  rootPatterns + '**/**/*.styl'], ['compile:styl']),
 	gulp.watch([rootPatterns + '**/**/*.pug', rootPages + '*.pug'], ['compile:pug']);
-	gulp.watch([rootJS + 'app.js', rootJS + '**/*.js'], browserSync.reload); ;
 });
 
 // Browser Sync - reload browser on change
@@ -91,4 +75,4 @@ gulp.task('clean:docs', function() {
 
 
 // Default gulp task to run
-gulp.task('default', ['clean:docs', 'compile:styl', 'compile:pug', 'compile:js', 'compile:assets', 'app:watch', 'app:browserSync']);
+gulp.task('default', ['clean:docs', 'compile:styl', 'compile:pug', 'compile:assets', 'app:watch', 'app:browserSync']);

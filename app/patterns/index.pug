@@ -1,4 +1,4 @@
-extends /patterns/00-layout/layout.pug
+extends /patterns/01-layout/layout.pug
 
 block mainContent
 	header(class="page-headline")
@@ -7,17 +7,7 @@ block mainContent
 	section(class="page-content")
 		p This Website is currently under construction.
 
-		ul(class="construction")
-			li
-				span(class="icon icon-stickman-2")
-				span(class="brick") References
-			li
-				span(class="brick brick-highlight") More colors
-				span(class="icon icon-stickman-2")
-				span(class="icon icon-stickman-4")
-			li
-				span(class="brick") An actual design
-				span(class="icon icon-stickman-1")
+		include 02-bricks/bricks.pug
 
 		p In the meantime you can get in touch with me on:
 		ul(class="contact")
