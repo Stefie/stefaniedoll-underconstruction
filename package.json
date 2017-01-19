@@ -1,10 +1,10 @@
 {
-	"name": "baseproject",
-	"description": "Basic project setup with pug2/ stylus/ gulp/ aframe",
+	"name": "stefaniedoll-underconstruction",
+	"description": "Homepage white under construction",
 	"version": "1.0.0",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:Stefie/baseproject.git"
+		"url": "git@github.com:Stefie/stefaniedoll-uderconstruction.git"
 	},
 	"scripts": {
 		"start": "gulp"
@@ -12,8 +12,7 @@
 	"keywords": [
 		"pug2",
 		"stylus",
-		"gulp",
-		"aframe"
+		"gulp"
 	],
 	"author": "Stefanie Doll",
 	"license": "ISC",
